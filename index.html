@@ -2,12 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/x-icon" href="/images/icone.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://RoMod.publit.io" crossorigin />
+    <link rel="preconnect" href="https://t12.pixhost.to" crossorigin />
+    <link rel="preconnect" href="https://www.megafree.xyz" crossorigin />
+    
+    <!-- Critical CSS Preloading -->
+    <link rel="preload" href="/assets/index.pornflix.css" as="style" />
+    <link rel="preload" href="/assets/index.pornflix.js" as="script" />
+    <link rel="preload" href="/assets/vendor.pornflix.js" as="script" />
+    
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Free adult content sharing platform. Access our extensive collection of adult videos and photos with no restrictions. Community-driven content updated daily." />
-    <meta name="keywords" content="pornflix, free adult content, adult videos, adult photos, porn sharing, download, community content, free access" />
+    <meta name="description" content="Watch free OnlyFans premium content. Access exclusive videos, photos and complete collections shared by our community. Browse our extensive library with no registration required. New content added daily." />
+    <meta name="keywords" content="OnlyFans, free premium content, exclusive videos, photos, OnlyFans leaks, folder, adult videos, free content, community sharing, premium collections, watch OnlyFans, adult content, free access, OnlyFans collections" />
     <meta name="author" content="PornFlix" />
     <meta name="robots" content="index, follow" />
     
@@ -17,31 +27,69 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.megafree.xyz" />
-    <meta property="og:title" content="PornFlix - Free Adult Content Sharing Platform" />
-    <meta property="og:description" content="Access free adult content shared by our community. No registration required for our extensive collection of adult videos and photos." />
+    <meta property="og:title" content="Watch Free OnlyFans Premium Content | Exclusive Collections | PornFlix" />
+    <meta property="og:description" content="Access exclusive OnlyFans content - premium videos, photos, and complete collections. Browse our extensive library of content shared by our growing community. No registration required." />
     <meta property="og:image" content="https://www.megafree.xyz/images/og-image.jpg" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://www.megafree.xyz" />
-    <meta property="twitter:title" content="PornFlix - Free Adult Content Sharing Platform" />
-    <meta property="twitter:description" content="Access free adult content shared by our community. No registration required for our extensive collection of adult videos and photos." />
+    <meta property="twitter:title" content="Watch Free OnlyFans Premium Content | Exclusive Collections | PornFlix" />
+    <meta property="twitter:description" content="Access exclusive OnlyFans content - premium videos, photos, and complete collections. Browse our extensive library of content shared by our growing community. No registration required." />
     <meta property="twitter:image" content="https://www.megafree.xyz/images/twitter-image.jpg" />
     
     <!-- Another balises SEO -->
     <meta name="theme-color" content="#141414" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://t12.pixhost.to" crossorigin>
-    <link rel="preconnect" href="http://192.168.1.200:5000" crossorigin>
+    <title>Watch Free OnlyFans Premium Content | Exclusive Videos, Photos & Complete Collections | PornFlix</title>
     
-    <title>PornFlix - Free Adult Content Sharing Platform</title>
-    <script type="module" crossorigin src="/assets/index.D5OR55Lx.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/vendor.BHl_RpiB.js">
-    <link rel="stylesheet" crossorigin href="/assets/index.B4cdifqZ.css">
+    <!-- The CSS is automatically injected by the build process -->
+    <script type="module" crossorigin src="/assets/index.pornflix.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor.pornflix.js">
+    <link rel="modulepreload" crossorigin href="/assets/player.pornflix.js">
+    <link rel="modulepreload" crossorigin href="/assets/router.pornflix.js">
+    <link rel="stylesheet" crossorigin href="/assets/index.pornflix2.css">
   </head>
   <body class="bg-[#141414]">
     <div id="root"></div>
+    
+    <!-- Add this loader that will be shown initially -->
+    <div id="initial-loader" style="display:flex;justify-content:center;align-items:center;height:100vh;background-color:#141414;color:white;position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;">
+      <div style="width:50px;height:50px;border:4px solid rgba(255,255,255,0.1);border-top-color:#e50914;border-radius:50%;animation:spin 1s linear infinite"></div>
+      <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+    </div>
+    
+    <!-- Script is automatically injected with the correct filename by the build process -->
+    <script>
+      // Remove loader when the page is fully loaded
+      window.addEventListener('load', function() {
+        const loader = document.getElementById('initial-loader');
+        if (loader) {
+          loader.style.opacity = '0';
+          loader.style.transition = 'opacity 0.5s ease';
+          setTimeout(() => {
+            loader.style.display = 'none';
+          }, 500);
+        }
+      });
+    </script>
+
+    <!-- Structured data for better search visibility -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PornFlix",
+        "url": "https://www.megafree.xyz/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.megafree.xyz/search?q={search_term}",
+          "query-input": "required name=search_term"
+        },
+        "description": "Watch and access free OnlyFans premium content. Browse exclusive videos, photos and complete collections shared by our community.",
+        "keywords": ["OnlyFans", "premium content", "exclusive videos", "photos", "free access", "collections"]
+      }
+    </script>
   </body>
 </html>
